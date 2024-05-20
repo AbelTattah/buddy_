@@ -22,8 +22,8 @@ def about():
 
 @app.route('/geturl',methods = ['POST'])
 def url():
-    keyword = request.get_json()
-    word = keyword["keyword"]
+    keyword = request.json
+    word = keyword["keywords"]
     titles, links = book_scraper.scrape(book_scraper.format_search_keyword(word))
     return jsonify({"titles":titles,"links":links})
 
