@@ -29,5 +29,6 @@ def url():
 
 if __name__ == '__main__':
     # Running the server
-    server = WSGIServer(('', 3000), app)
+    print("server is live...")
+    server = WSGIServer((''), app)
     server.serve_forever()
