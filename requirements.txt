@@ -3,3 +3,4 @@ flask_cors
 python-dotenv
 gevent
 bs4
+requests
