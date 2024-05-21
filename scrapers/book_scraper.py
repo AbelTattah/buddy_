@@ -26,7 +26,11 @@ def scrape(search_keywords):
         for td in soup.find_all('td',width = 500):
             titles.append(td.get_text())
         for link in soup.find_all('a',title=title):
-            links.append(link.get('href'))  
+            t = s.post(link.get('href'))
+            re = BeautifulSoup(t.text,'html.parser')
+            nl = re.find('a')
+            al = nl.get('href')
+            links.append(al)  
         if len(titles) == 0 and len(links) == 0:  
             titles.append("Not found")
             links.append("Not found")          
