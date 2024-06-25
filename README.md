@@ -4,7 +4,7 @@ A new faster link will be posted very soon.
 
 ## Endpoint
 1. /geturl
-This endpoint recieves Book keywords an returns book Titles and their corresponding download linksl.
+This endpoint recieves Book keywords an returns book Titles and their corresponding download links.
 
 Request Body:
 ```
