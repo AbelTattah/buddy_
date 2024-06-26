@@ -24,8 +24,8 @@ def about():
 def url():
     keyword = request.json
     word = keyword["keywords"]
-    titles, links = book_scraper.scrape(book_scraper.format_search_keyword(word))
-    return jsonify({"titles":titles,"links":links})
+    titles, links, images = book_scraper.scrape(book_scraper.format_search_keyword(word))
+    return jsonify({"titles":titles,"links":links,"images":images})
 
 if __name__ == '__main__':
     # Running the server
