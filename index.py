@@ -32,5 +32,5 @@ def url():
 if __name__ == '__main__':
     # Running the server
     print("server is live...")
-    server = WSGIServer(('', 3000), app)
+    server = WSGIServer(('', 3400), app)
     server.serve_forever()
