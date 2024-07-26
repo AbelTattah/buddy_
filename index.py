@@ -10,6 +10,8 @@ from flask_cors import CORS
 
 app  = Flask(__name__)
 
+book = book_scraper.Scrape()
+
 CORS(app)
 
 @app.route('/')
@@ -24,7 +26,7 @@ def about():
 def url():
     keyword = request.json
     word = keyword["keywords"]
-    titles, links, images = book_scraper.scrape(book_scraper.format_search_keyword(word))
+    titles, links, images = book.scrape(book.format_search_keyword(word))
     return jsonify({"titles":titles,"links":links,"images":images})
 
 if __name__ == '__main__':
