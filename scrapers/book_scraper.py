@@ -52,10 +52,8 @@ class Scrape:
                         images.append(f"https://library.lol"+image_route)
                         # Append the download link to the links list
                         links.append(al)  
-                    if len(titles) == 0 and len(links) == 0:  
-                        titles.append("Book is not available")
-                        links.append("Book is not available")          
-                        return titles, links
+                    if len(titles) == 0 and len(links) == 0:           
+                        return titles, links, images
                     else:
                         cache.setCache(search_keywords, [titles,links,images])
                         return titles, links, images
