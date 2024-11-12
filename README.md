@@ -1,6 +1,5 @@
 # Book Scraper
 Link: https://octopus-app-3-6xu4s.ondigitalocean.app
-A new faster link will be posted very soon.
 
 ## Endpoint
 1. /geturl
