@@ -1,10 +1,13 @@
-# Book Scraper
+# Introduction
 This is a simple python API that serves you with book images and download links.
+
+```
 URL: https://buddy-zpdh.onrender.com
+```
 
 FYI: This API is deployed on a free Render instance so the initial requests may get slower responses.
 
-## Endpoint
+## Route
 ```
 https://buddy-zpdh.onrender.com/geturl
 ```
