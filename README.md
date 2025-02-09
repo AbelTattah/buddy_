@@ -1,24 +1,31 @@
 # Book Scraper
-Link: https://octopus-app-3-6xu4s.ondigitalocean.app
+This is a simple python API that serves you with book images and download links.
+URL: https://buddy-zpdh.onrender.com
+
+FYI: This API is deployed on a free Render instance so the initial requests may get slower responses.
 
 ## Endpoint
-1. /geturl
+```
+https://buddy-zpdh.onrender.com/geturl
+```
+
 This endpoint recieves Book keywords an returns book Titles and their corresponding download links.
 
-Request Body:
+## Example Request
+### Request Body
 ```
 {
 	"keywords":"My Book of Bible Stories"
 }
 ```
-Request Headers:
+### Request Headers:
 ```
 {
 "content-Type":"application/json"
 }
 ```
 
-### Example Response
+## Example Response
 ```
 Response:200, OK
 {
@@ -36,9 +43,11 @@ Response:200, OK
          ]
 }
 ```
+#### Book data is sraped from https://libgen.is/
 
+
+## Examples in various languages
 ### Javascript
-
 ```
 async function fetchBooks(bookCode: string) {
   let endpoints = []
