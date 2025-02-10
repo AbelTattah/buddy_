@@ -1,5 +1,5 @@
 # Introduction
-This is a simple python API that serves you with book images and download links.
+This is a simple python API that serves you with book images and download links based on a keywords.
 
 ```
 URL: https://buddy-zpdh.onrender.com
@@ -15,7 +15,7 @@ https://buddy-zpdh.onrender.com/geturl
 This endpoint recieves Book keywords an returns book Titles and their corresponding download links.
 
 ## Example Request
-### Request Body
+### Request Body (JSON)
 ```
 {
 	"keywords":"My Book of Bible Stories"
@@ -57,7 +57,7 @@ async function fetchBooks(bookCode: string) {
   let images = []
   let titles = []
   try {
-    const response = await fetch('https://octopus-app-3-6xu4s.ondigitalocean.app/geturl', {
+    const response = await fetch('https://buddy-zpdh.onrender.com/geturl', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ async def fetch_books(book_code: str):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                'https://octopus-app-3-6xu4s.ondigitalocean.app/geturl',
+                'https://buddy-zpdh.onrender.com/geturl',
                 headers={'Content-Type': 'application/json'},
                 data=json.dumps({'keywords': book_code})
             ) as response:
@@ -122,7 +122,7 @@ public class BookFetcher {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                   .uri(URI.create("https://octopus-app-3-6xu4s.ondigitalocean.app/geturl"))
+                   .uri(URI.create("https://buddy-zpdh.onrender.com/geturl"))
                    .header("Content-Type", "application/json")
                    .POST(HttpRequest.BodyPublishers.ofString("{\"keywords\":\"" + bookCode + "\"}"))
                    .build();
@@ -158,7 +158,7 @@ public class BookFetcher {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                   .uri(URI.create("https://octopus-app-3-6xu4s.ondigitalocean.app/geturl"))
+                   .uri(URI.create("https://buddy-zpdh.onrender.com/geturl"))
                    .header("Content-Type", "application/json")
                    .POST(HttpRequest.BodyPublishers.ofString("{\"keywords\":\"" + bookCode + "\"}"))
                    .build();
@@ -194,7 +194,7 @@ public class BookFetcher {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                   .uri(URI.create("https://octopus-app-3-6xu4s.ondigitalocean.app/geturl"))
+                   .uri(URI.create("https://buddy-zpdh.onrender.com/geturl"))
                    .header("Content-Type", "application/json")
                    .POST(HttpRequest.BodyPublishers.ofString("{\"keywords\":\"" + bookCode + "\"}"))
                    .build();
