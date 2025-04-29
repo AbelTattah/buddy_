@@ -49,8 +49,7 @@ class Scrape:
                         al = nl.get('href')
                         image = re.find('img')
                         image_route = image.get('src')
-                        images.append(f"https://library.lol"+image_route)
-                        # Append the download link to the links list
+                        images.append(f"https://books.ms"+image_route) # Append the download link to the links list
                         links.append(al)  
                     if len(titles) == 0 and len(links) == 0:           
                         return titles, links, images
