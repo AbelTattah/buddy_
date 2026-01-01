@@ -1,5 +1,5 @@
 # Introduction
-This is a simple python API that serves you with book images and download links based on a keywords.
+This is a simple python API that serves you with book images and download links based on keywords.
 
 ```
 URL: https://buddy-zpdh.onrender.com
